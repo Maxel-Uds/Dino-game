@@ -72,9 +72,9 @@ function createCactus()
             gameOver.innerHTML = 'Game Over';
             lose = true;
         }
-        else
+        else if(!lose)
         {
-            cactusPosition -= 10;
+            cactusPosition -= 11;
             cactus.style.left = cactusPosition + 'px';
         }
     }, 20);
