@@ -96,10 +96,7 @@ function createCactus()
         }
     }, 20);
 
-    if(!lose)
-    {
-        setTimeout(createCactus, Math.floor(Math.random() * (1500 - 700) + 700));
-    }
+    setTimeout(createCactus, Math.floor(Math.random() * (1500 - 700) + 700));
 }
 
 function dead()
