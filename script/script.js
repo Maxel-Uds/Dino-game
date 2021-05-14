@@ -1,7 +1,5 @@
 let dino = document.querySelector('.dino');
 let img = document.createElement('img');
-img.src = '../img/direita.png';
-dino.appendChild(img);
 const backgorund = document.querySelector('.background');
 let gameOver = document.getElementById('game-over');
 let isJumping = false;
@@ -10,6 +8,9 @@ let position = 0;
 
 function moveDino() 
 {
+    img.src = '../img/direita.png';
+    dino.appendChild(img);
+
     setTimeout(() => {
         dino.removeChild(img);
         img.src = '../img/esquerda.png';
@@ -71,12 +72,11 @@ function createCactus()
 {
     const cactus = document.createElement('div');
     let cactusPosition = 1310;
-   
 
     cactus.classList.add('cactus');
     cactus.style.left = 1310 + 'px';
     backgorund.appendChild(cactus);
-
+    backgorund.classList.add('move');
 
     let leftInterval = setInterval(() => {
         if(cactusPosition < -60)
@@ -105,6 +105,7 @@ function dead()
     dino.removeChild(img);
     img.src = '../img/morto.png'
     dino.appendChild(img);
+    backgorund.classList.remove('move');
 }
 
 moveDino();

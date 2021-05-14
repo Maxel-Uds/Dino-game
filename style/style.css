@@ -39,7 +39,10 @@ body {
     bottom: 0;
     background-image: url('../img/background.png');
     background-repeat: repeat-x;
-    animation: slideRight 600s infinite linear;
     width: 100%;
     height: 200px;
+}
+
+.move {
+    animation: slideRight 600s infinite linear;
 }
