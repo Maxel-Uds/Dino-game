@@ -2,6 +2,13 @@ body {
     background: #fafafa;
 }
 
+#game-over {
+    text-align: center;
+    color: #6666;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .dino {
     width: 60px;
     height: 60px;
@@ -16,13 +23,6 @@ body {
     height: 60px;
     bottom: 0;
     background-image: url('../img/cactus.png');
-}
-
-.game-over {
-    text-align: center;
-    color: #6666;
-    margin-top: 50px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 @keyframes slideRight {
