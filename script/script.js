@@ -1,4 +1,5 @@
-const dino = document.querySelector('.dino');
+let dino = document.querySelector('.dino');
+let img = document.createElement('img')
 const backgorund = document.querySelector('.background')
 let gameOver = document.getElementById('game-over');
 let isJumping = false;
@@ -7,9 +8,8 @@ let position = 0;
 
 function moveDino() 
 {
-    var img = document.createElement('img')
     img.src = '../img/dino.png';
-    document.querySelector('.dino').appendChild(img);
+    dino.appendChild(img);
 }
 
 function handleKeyDown(event)
@@ -78,6 +78,9 @@ function createCactus()
         {
             gameOver.innerHTML = 'Game Over';
             lose = true;
+            dino.removeChild(img);
+            img.src = '../img/morto.png'
+            dino.appendChild(img);
         }
         else if(!lose)
         {
