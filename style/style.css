@@ -12,7 +12,6 @@ body {
 .dino {
     width: 60px;
     height: 60px;
-    background-image: url('../img/dino.png');
     position: absolute;
     bottom: 0;
 }

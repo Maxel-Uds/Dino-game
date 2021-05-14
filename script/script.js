@@ -5,6 +5,13 @@ let isJumping = false;
 let lose = false;
 let position = 0;
 
+function moveDino() 
+{
+    var img = document.createElement('img')
+    img.src = '../img/dino.png';
+    document.querySelector('.dino').appendChild(img);
+}
+
 function handleKeyDown(event)
 {
     if(event.keyCode == 32 || event.keyCode == 38)
@@ -82,5 +89,6 @@ function createCactus()
     setTimeout(createCactus, minMax());
 }
 
+moveDino();
 createCactus();
 document.addEventListener('keydown', handleKeyDown);
